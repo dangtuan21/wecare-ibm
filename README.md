@@ -63,6 +63,9 @@ We use mlab.com to host mongodb. It's free upto 500mb.
 You can download Android version here : 
 The iOS version should be updated soon.
 
+## Screenshots
+
+
 ## Built with
 
 - [IBM Cloud](https://cloud.ibm.com) - Backend site of the WeCare.
