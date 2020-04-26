@@ -39,10 +39,23 @@ These instructions will get you a copy of the project up and running on your loc
 We use mlab.com to host mongodb. It's free upto 500mb. 
 
 #### Backend site
-#### Frontend site
-#####For Android 
 
-#####For iOS
+```bash
+npm install
+npm start
+Server is listening on 8080
+Database is connected
+```
+
+#### Mobile app site
+```bash
+npm install
+```
+
+For Android 
+```bash
+npm run build-android
+```
 
 ## Live demo
 
