@@ -43,11 +43,14 @@ We use mlab.com to host mongodb. It's free upto 500mb.
 ```bash
 npm install
 npm start
+```
+Output
+```bash
 Server is listening on 8080
 Database is connected
 ```
 
-#### Mobile app site
+#### Mobile app 
 ```bash
 npm install
 ```
