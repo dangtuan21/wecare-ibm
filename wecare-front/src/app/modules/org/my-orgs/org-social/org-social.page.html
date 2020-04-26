@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>{{org ? org.name : ''}} Social</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div *ngIf="isLoading" class="ion-text-center">
+    <ion-spinner color="primary"></ion-spinner>
+  </div>
+  <div>
+    <ion-list>
+      <ion-item *ngFor="let message of messages">
+        <ion-label>
+          <div class="ion-text-wrap message-text">
+            {{ message.text }}
+          </div>
+          <div class="message-details">
+            <ion-icon name="calendar" color="medium"></ion-icon>
+            <ion-text color="medium" class="space-left"
+              >{{getTime(message.eventDate) }}</ion-text
+            >
+            <span class="space-left"></span>
+            <ion-text color="medium" class="ion-float-right"
+              >by {{ message.userName }}</ion-text
+            >
+          </div>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
+<ion-footer class="footer">
+  <ion-toolbar>
+    <ion-item>
+      <form [formGroup]="form" *ngIf="!isLoading">
+        <ion-input
+          formControlName="messageText"
+          spellcheck="true"
+          autoComplete="true"
+          autocorrect="true"
+          maxlength="140"
+          type="text"
+          placeholder="Enter message ..."
+        ></ion-input>
+        <!-- <button ion-button item-right (click)="onSendMessage()">
+          <ion-icon name="send"></ion-icon>
+        </button> -->
+      </form>
+    </ion-item>
+    <ion-item>
+      <ion-buttons>
+        <ion-button color="primary" expand="full" (click)="onSendMessage()">
+          Send
+        </ion-button>
+        <ion-button routerLink="members" color="primary" expand="full">
+          Members
+        </ion-button>
+        <ion-button (click)="onInvite()" color="primary" expand="full">
+          Invite
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Map</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid style="height: 100%;" class="ion-no-padding">
+    <ion-row style="height: 4%;" color="green">
+      <ion-col> <ion-icon name="sad"></ion-icon>{{countData}}</ion-col>
+    </ion-row>
+    <ion-row style="height: 96%;">
+      <ion-col>
+        <div class="map" #map></div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
